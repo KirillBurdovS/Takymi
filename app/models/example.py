@@ -1,8 +1,10 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
+# Создаем базовый класс для моделей
 Base = declarative_base()
 
+# Определяем модель ExampleModel
 class ExampleModel(Base):
     __tablename__ = 'example'
 

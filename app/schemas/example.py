@@ -5,17 +5,21 @@ class ExampleBase(BaseModel):
     name: str
     description: Optional[str] = None
 
-class ExampleCreate(ExampleBase):
-    pass
+class ExampleCreate(BaseModel):
+    name: str
+    description: str
 
-class ExampleUpdate(ExampleBase):
-    pass
+class ExampleUpdate(BaseModel):
+    name: str
+    description: str
 
-class Example(ExampleBase):
+class ExampleResponse(BaseModel):
     id: int
+    name: str
+    description: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class ExampleList(BaseModel):
-    examples: List[Example]
+    examples: List[ExampleResponse]
