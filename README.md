@@ -1,6 +1,6 @@
-# My FastAPI Backend
+# FastAPI Backend
 
-This is a FastAPI backend project structured for modularity and scalability. It includes various components such as API endpoints, database models, schemas for data validation, and CRUD operations.
+Этот проект представляет собой пример бэкенда на FastAPI с использованием SQLAlchemy для работы с базой данных.
 
 ## Project Structure
 
@@ -24,23 +24,19 @@ my-fastapi-backend
 └── README.md                   # Project documentation
 ```
 
-## Setup Instructions
+## Установка
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd my-fastapi-backend
-   ```
+1. Установите зависимости:
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+2. Запустите сервер:
+    ```sh
+    uvicorn app.main:app --reload
+    ```
 
-3. Run the application:
-   ```
-   uvicorn app.main:app --reload
-   ```
+3. Откройте браузер и перейдите по адресу `http://127.0.0.1:8000` для проверки работы сервера.
 
 ## Usage
 

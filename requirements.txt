@@ -1,6 +1,7 @@
-FastAPI
+fastapi
 uvicorn
 sqlalchemy
-pydantic
 databases
+pydantic
+alembic
 python-dotenv

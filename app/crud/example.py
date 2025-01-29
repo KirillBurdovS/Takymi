@@ -1,6 +1,25 @@
 from sqlalchemy.orm import Session
 from app.models.example import ExampleModel
-from app.schemas.example import ExampleCreate, ExampleUpdate
+from pydantic import BaseModel
+
+# Схема для создания примера
+class ExampleCreate(BaseModel):
+    name: str
+    description: str
+
+# Схема для обновления примера
+class ExampleUpdate(BaseModel):
+    name: str
+    description: str
+
+# Схема для ответа с примером
+class ExampleResponse(BaseModel):
+    id: int
+    name: str
+    description: str
+
+    class Config:
+        from_attributes = True
 
 # Функция для создания нового примера
 async def create_example(db: Session, example: ExampleCreate):
