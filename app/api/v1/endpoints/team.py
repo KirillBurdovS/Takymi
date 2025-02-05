@@ -4,6 +4,7 @@ from app.crud.team import create_team_lead, get_team_lead, create_participant, g
 from app.schemas.team import TeamLeadCreate, TeamLead, ParticipantCreate, Participant
 from app.db.session import get_db
 import shutil
+from typing import List
 
 router = APIRouter()
 
